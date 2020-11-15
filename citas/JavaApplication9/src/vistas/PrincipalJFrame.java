@@ -38,8 +38,8 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        MiRegistrar = new javax.swing.JMenuItem();
+        MiConsultar = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         jMenuItem3.setText("jMenuItem3");
@@ -71,16 +71,21 @@ public class PrincipalJFrame extends javax.swing.JFrame {
 
         jMenu3.setText("Consultorio");
 
-        jMenuItem2.setText("Registrar");
-        jMenu3.add(jMenuItem2);
-
-        jMenuItem4.setText("Consultar");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        MiRegistrar.setText("Registrar");
+        MiRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                MiRegistrarActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem4);
+        jMenu3.add(MiRegistrar);
+
+        MiConsultar.setText("Consultar");
+        MiConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MiConsultarActionPerformed(evt);
+            }
+        });
+        jMenu3.add(MiConsultar);
 
         jMenuBar1.add(jMenu3);
 
@@ -103,9 +108,17 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    private void MiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiConsultarActionPerformed
+        ConsultarConsultorio ventana = new ConsultarConsultorio();
+        this.Escritorio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MiConsultarActionPerformed
+
+    private void MiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiRegistrarActionPerformed
+        RegistrarConsultorio ventana = new RegistrarConsultorio(); 
+        this.Escritorio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MiRegistrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,6 +157,8 @@ public class PrincipalJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenuItem MiConsultar;
+    private javax.swing.JMenuItem MiRegistrar;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -151,9 +166,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
