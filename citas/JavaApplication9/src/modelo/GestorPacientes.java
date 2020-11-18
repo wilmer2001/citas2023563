@@ -9,7 +9,6 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class GestorPacientes {
-
     private static LinkedList<Paciente> pacientes;
     private static Connection conn;
 
