@@ -7,10 +7,12 @@ import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import recursos.conexion;
 
 public class GestorPacientes {
     private static LinkedList<Paciente> pacientes;
-    private static Connection conn;
+    Connection conn;
+    conexion conectar = new conexion();
 
     public GestorPacientes() {
         //recurso.Conexion conexion = new recursos.Conexion("localhost","root","","citas_medicas");    
