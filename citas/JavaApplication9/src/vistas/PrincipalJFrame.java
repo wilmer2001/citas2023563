@@ -34,10 +34,10 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         jEditorPane1 = new javax.swing.JEditorPane();
         Escritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        MiSalir = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        MConsultorio = new javax.swing.JMenu();
         MiRegistrar = new javax.swing.JMenuItem();
         MiConsultar = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
@@ -59,17 +59,17 @@ public class PrincipalJFrame extends javax.swing.JFrame {
             .addGap(0, 279, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Archivo");
+        MiSalir.setText("Archivo");
 
         jMenuItem1.setText("Salir");
-        jMenu1.add(jMenuItem1);
+        MiSalir.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(MiSalir);
 
         jMenu2.setText("Pacientes");
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Consultorio");
+        MConsultorio.setText("Consultorio");
 
         MiRegistrar.setText("Registrar");
         MiRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +77,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
                 MiRegistrarActionPerformed(evt);
             }
         });
-        jMenu3.add(MiRegistrar);
+        MConsultorio.add(MiRegistrar);
 
         MiConsultar.setText("Consultar");
         MiConsultar.addActionListener(new java.awt.event.ActionListener() {
@@ -85,9 +85,9 @@ public class PrincipalJFrame extends javax.swing.JFrame {
                 MiConsultarActionPerformed(evt);
             }
         });
-        jMenu3.add(MiConsultar);
+        MConsultorio.add(MiConsultar);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(MConsultorio);
 
         jMenu4.setText("Medicos");
         jMenuBar1.add(jMenu4);
@@ -157,12 +157,12 @@ public class PrincipalJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenu MConsultorio;
     private javax.swing.JMenuItem MiConsultar;
     private javax.swing.JMenuItem MiRegistrar;
+    private javax.swing.JMenu MiSalir;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
