@@ -45,8 +45,8 @@ public class principalJframe extends javax.swing.JFrame {
         archivo = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        registrar = new javax.swing.JMenuItem();
+        consultar = new javax.swing.JMenuItem();
         jMenu10 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -116,11 +116,21 @@ public class principalJframe extends javax.swing.JFrame {
 
         jMenu2.setText("pacientes");
 
-        jMenuItem2.setText("Registrar");
-        jMenu2.add(jMenuItem2);
+        registrar.setText("Registrar");
+        registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registrarActionPerformed(evt);
+            }
+        });
+        jMenu2.add(registrar);
 
-        jMenuItem3.setText("Consultar");
-        jMenu2.add(jMenuItem3);
+        consultar.setText("Consultar");
+        consultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarActionPerformed(evt);
+            }
+        });
+        jMenu2.add(consultar);
 
         jMenuBar1.add(jMenu2);
 
@@ -210,6 +220,18 @@ public class principalJframe extends javax.swing.JFrame {
         ventana1.show();
     }//GEN-LAST:event_MiConsultarActionPerformed
 
+    private void consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarActionPerformed
+        consultarpacientes ventana1 = new consultarpacientes();
+        this.escritorio.add(ventana1);
+        ventana1.show();
+    }//GEN-LAST:event_consultarActionPerformed
+
+    private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
+        registrarpacientes ventana1 = new registrarpacientes();
+        this.escritorio.add(ventana1);
+        ventana1.show();
+    }//GEN-LAST:event_registrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -249,6 +271,7 @@ public class principalJframe extends javax.swing.JFrame {
     private javax.swing.JMenuItem MiConsultar;
     private javax.swing.JMenuItem MiRegistrar;
     private javax.swing.JMenu archivo;
+    private javax.swing.JMenuItem consultar;
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -266,10 +289,9 @@ public class principalJframe extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuBar jMenuBar4;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JMenuItem registrar;
     // End of variables declaration//GEN-END:variables
 }
