@@ -199,13 +199,13 @@ public class principalJframe extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void MiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiRegistrarActionPerformed
-        RegistrarConsultorio ventana1 = new RegistrarConsultorio ();
+        RegistrarConsultorio ventana1 = new RegistrarConsultorio();
         this.escritorio.add(ventana1);
         ventana1.show();// TODO add your handling code here:
     }//GEN-LAST:event_MiRegistrarActionPerformed
 
     private void MiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiConsultarActionPerformed
-        ConsultarConsultorio ventana1 = new ConsultarConsultorio ();
+        ConsultarConsultorio ventana1 = new ConsultarConsultorio();
         this.escritorio.add(ventana1);
         ventana1.show();
     }//GEN-LAST:event_MiConsultarActionPerformed

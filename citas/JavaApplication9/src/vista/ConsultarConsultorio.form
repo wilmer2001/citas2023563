@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+<<<<<<< HEAD
+=======
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+  </NonVisualComponents>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
   <Properties>
     <Property name="closable" type="boolean" value="true"/>
     <Property name="iconifiable" type="boolean" value="true"/>
@@ -29,6 +38,7 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+<<<<<<< HEAD
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Component id="RNumeroConsultorio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -48,16 +58,44 @@
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+=======
+                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="RNumero" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="RNombre" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="LblBuscar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="TxtBuscador" min="-2" pref="201" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="BAceptar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="RNumeroConsultorio" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="RNombreConsultorio" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="RNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="RNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -65,14 +103,21 @@
                   <Component id="TxtBuscador" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+<<<<<<< HEAD
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="283" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+=======
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="177" max="-2" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
+<<<<<<< HEAD
     <Component class="javax.swing.JRadioButton" name="RNumeroConsultorio">
       <Properties>
         <Property name="text" type="java.lang.String" value="N&#xfa;mero de Consultorio"/>
@@ -81,10 +126,21 @@
     <Component class="javax.swing.JRadioButton" name="RNombreConsultorio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nombre de Consultorio"/>
+=======
+    <Component class="javax.swing.JRadioButton" name="RNumero">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="RNombre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre"/>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="LblBuscar">
       <Properties>
+<<<<<<< HEAD
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
     </Component>
@@ -94,6 +150,15 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Aceptar"/>
       </Properties>
+=======
+        <Property name="text" type="java.lang.String" value="Buscar:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtBuscador">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtBuscadorActionPerformed"/>
+      </Events>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -102,11 +167,19 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
+<<<<<<< HEAD
         <Component class="javax.swing.JTable" name="jTable1">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="2" rowCount="4">
                 <Column editable="true" title="N&#xfa;mero de Consultorio" type="java.lang.Integer"/>
+=======
+        <Component class="javax.swing.JTable" name="TDatos">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="4">
+                <Column editable="true" title="N&#xfa;mero de consultorio" type="java.lang.Integer"/>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
                 <Column editable="true" title="Nombre de Consultorio" type="java.lang.String"/>
               </Table>
             </Property>
@@ -114,5 +187,13 @@
         </Component>
       </SubComponents>
     </Container>
+<<<<<<< HEAD
+=======
+    <Component class="javax.swing.JButton" name="BAceptar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aceptar"/>
+      </Properties>
+    </Component>
+>>>>>>> d99c707688f730e1754e4975273f493f007fda42
   </SubComponents>
 </Form>
