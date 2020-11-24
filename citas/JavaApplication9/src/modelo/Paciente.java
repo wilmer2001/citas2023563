@@ -1,6 +1,6 @@
 package modelo;
 
-class Paciente {
+public class Paciente {
 
     private String identificador;
     private String nombres;

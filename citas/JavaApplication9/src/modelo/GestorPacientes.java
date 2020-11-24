@@ -8,22 +8,35 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import recursos.conexion;
+import vista.registrarpacientes;
 
 public class GestorPacientes {
-    private static LinkedList<Paciente> pacientes;
-    Connection conn;
+
+    public static LinkedList<Paciente> pacientes;
+    Connection con;
     conexion conectar = new conexion();
 
     public GestorPacientes() {
-        //recurso.Conexion conexion = new recursos.Conexion("localhost","root","","citas_medicas");    
-        //conn=cenexion.getConexion();
+        pacientes = new LinkedList<Paciente>();
     }
 
-    public void RegistrarPacientes(Paciente paciente) throws SQLException {
+    public void registrarPacientes(Paciente paciente) {
+        pacientes.add(paciente);
+    }
+
+    public static LinkedList<Paciente> getPacientebyParametro(int parametro, String valor) {
+        LinkedList<Paciente> resultado = new LinkedList<Paciente>();
+        for (Paciente pac : pacientes) {
+
+        }
+        return null;
+    }
+
+    public void registrarPacientesDB(modelo.Paciente paciente) throws SQLException {
 
         PreparedStatement pst;
         try {
-            pst = conn.prepareStatement("insert into paciente values(?,?,?,?,?)");
+            pst = con.prepareStatement("insert into paciente values(?,?,?,?,?)");
             pst.setString(1, paciente.getIdentificador());
             pst.setString(2, paciente.getNombres());
             pst.setString(3, paciente.getApellidos());
@@ -36,23 +49,28 @@ public class GestorPacientes {
 
         //pacientes.add(paciente);
     }
+
 }
-   /* public LinkedList<Paciente> getPacientebyParametro(int parametro, String valor) {
+/*public LinkedList<Paciente> getPacientebyParametro(int parametro, String valor) {
         LinkedList<Paciente> resultado = new LinkedList<Paciente>();
-        String sql-"";
+        String sql="";
 //for(Paciente pac:pacientes)
 
         switch(parametro){
 case 1: if(pac.getIdentificacion().equals(valor))
-resultado.add(pac);
+        sql="select * from pacientes where PACIDENTIFICACION='"+valor+"'";
+//  resultado.add(pac);
 break;
 case 2: if(pac.getNombres().equals(valor))
+         sql="select * from pacientes where PACNOMBRES='"+valor+"'";
 resultado.add(pac);
 break;
 case 3: if(pac.getApellidos().equals(valor))
+         sql="select * from pacientes where PACAPELLIDOS='"+valor+"'";
 resultado.add(pac);
 break;
 case 4: if(pac.getGenero().equals(valor))
+         sql="select * from pacientes where PACGENERO='"+valor+"'";
 resultado.add(pac);
 break;
-         */
+}*/
