@@ -55,5 +55,4 @@ public class Paciente {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-
 }
