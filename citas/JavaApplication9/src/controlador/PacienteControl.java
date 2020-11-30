@@ -31,8 +31,8 @@ public class PacienteControl implements ActionListener {
             } else if (pacientevista.jRadioButton2.isSelected()) {
                 sexo = "F";
             }
-            pacienteModelo = new modelo.Paciente(identificacion, nombres, apellidos, fecha_nacimiento, sexo);
-            gestorPacienteModelo.registrarPacientes(pacienteModelo);
+            this.pacienteModelo = new modelo.Paciente(identificacion, nombres, apellidos, fecha_nacimiento, sexo);
+            this.gestorPacienteModelo.registrarPacientes(pacienteModelo);
         }
         if (e.getSource().equals(pacientevista.jButton2)) {
 
