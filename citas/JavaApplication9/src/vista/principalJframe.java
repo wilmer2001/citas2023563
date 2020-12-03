@@ -3,8 +3,12 @@ package vista;
 
 
 public class principalJframe extends javax.swing.JFrame {
+
+    private static final long serialVersionUID = 1L;
     registrarpacientes registrarpacientes;
     consultarpacientes consultarpacientes;
+    Registrar_medicos registrarmedicos;
+    Consultar_medicos consultarmedicos;
 
     
     public principalJframe() {
@@ -12,6 +16,8 @@ public class principalJframe extends javax.swing.JFrame {
         consultarpacientes= new  consultarpacientes ();
         add(registrarpacientes);
         add(consultarpacientes);
+        registrarmedicos = new Registrar_medicos();
+        consultarmedicos = new Consultar_medicos();
         initComponents();
         this.setExtendedState(principalJframe.MAXIMIZED_BOTH);
     }
@@ -198,12 +204,14 @@ public class principalJframe extends javax.swing.JFrame {
         Registrar_medicos ventana = new Registrar_medicos();
         this.escritorio.add(ventana);
         ventana.show();
+      registrarmedicos.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         Consultar_medicos ventana1 = new Consultar_medicos();
     this.escritorio.add(ventana1);
-        ventana1.show();
+    ventana1.show();
+        consultarmedicos.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void MiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiRegistrarActionPerformed

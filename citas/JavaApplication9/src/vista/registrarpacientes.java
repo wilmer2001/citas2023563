@@ -33,6 +33,10 @@ public class registrarpacientes extends javax.swing.JInternalFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
+        setClosable(true);
+        setMaximizable(true);
+        setResizable(true);
+
         jLabel1.setText("Identificacion:");
 
         jLabel2.setText("Nombres:");
@@ -54,6 +58,12 @@ public class registrarpacientes extends javax.swing.JInternalFrame {
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        txtidentificacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtidentificacionActionPerformed(evt);
             }
         });
 
@@ -159,6 +169,10 @@ public class registrarpacientes extends javax.swing.JInternalFrame {
     private void txtapellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtapellidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtapellidoActionPerformed
+
+    private void txtidentificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidentificacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtidentificacionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
