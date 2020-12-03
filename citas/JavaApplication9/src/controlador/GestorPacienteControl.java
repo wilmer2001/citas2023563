@@ -17,7 +17,7 @@ public class GestorPacienteControl implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         DefaultTableModel modelo;
-        String valor = consultarpacientevista.txt_valor.getText();
+        String valor = consultarpacientevista.btn_aceptar.getText();
         int parametro = 0;
         if (consultarpacientevista.rdb_identificacion.isSelected()) {
             parametro = 1;

@@ -120,14 +120,14 @@ public class Consultar_medicos extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton baceptar;
+    public javax.swing.JButton baceptar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JRadioButton rapellido;
-    private javax.swing.JRadioButton ridentificacion;
-    private javax.swing.JRadioButton rnombre;
-    private javax.swing.JRadioButton rsexo;
-    private javax.swing.JTable tresultado;
-    private javax.swing.JTextField txtbusqueda;
+    public javax.swing.JRadioButton rapellido;
+    public javax.swing.JRadioButton ridentificacion;
+    public javax.swing.JRadioButton rnombre;
+    public javax.swing.JRadioButton rsexo;
+    public javax.swing.JTable tresultado;
+    public javax.swing.JTextField txtbusqueda;
     // End of variables declaration//GEN-END:variables
 }
