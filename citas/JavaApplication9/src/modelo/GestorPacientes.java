@@ -2,7 +2,9 @@ package modelo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,12 +13,13 @@ import recursos.*;
 
 public class GestorPacientes {
 
-    public static LinkedList<Paciente> pacientes;
+    private static LinkedList<Paciente> pacientes;
     private static Connection con;
 
     public GestorPacientes() {
         Conexion conexion = new Conexion();
         con = conexion.getConnection();
+        pacientes = new LinkedList<Paciente>();
     }
 
     public void registrarPacientes(Paciente paciente) {
@@ -35,43 +38,62 @@ public class GestorPacientes {
         } catch (SQLException ex) {
             Logger.getLogger(GestorPacientes.class.getName()).log(Level.SEVERE, null, ex);
         }
-//        pacientes.add(paciente);
+        // pacientes.add(paciente);
     }
 
     public LinkedList<Paciente> getPacientebyParametro(int parametro, String valor) {
         LinkedList<Paciente> resultado = new LinkedList<Paciente>();
         String sql = "";
 
-        for (Paciente pac : pacientes) {
-            switch (parametro) {
-                case 1:
-                    if (pac.getIdentificador().equals(valor)) {
-                        sql = "select * from pacientes where PACIDENTIFICACION='" + valor + "'";
-                    }
-                    resultado.add(pac);
-                    break;
-                case 2:
-                    if (pac.getNombres().equals(valor)) {
-                        sql = "select * from pacientes where PACNOMBRES='" + valor + "'";
-                    }
-                    resultado.add(pac);
-                    break;
-                case 3:
-                    if (pac.getApellidos().equals(valor)) {
-                        sql = "select * from pacientes where PACAPELLIDOS='" + valor + "'";
-                    }
-                    resultado.add(pac);
-                    break;
-                case 4:
-                    if (pac.getSexo().equals(valor)) {
-                        sql = "select * from pacientes where PACGENERO='" + valor + "'";
-                    }
-                    resultado.add(pac);
-                    break;
-            }
+        //   for (Paciente pac : pacientes) {
+        switch (parametro) {
+            case 1:
+                // if (pac.getIdentificador().equals(valor)) {
+                sql = "select * from pacientes where pacIdentificador='" + valor + "'";
+                //}
+                //resultado.add(pac);
+                break;
+            case 2:
+                //  if (pac.getNombres().equals(valor)) {
+                sql = "select * from pacientes where pacNombres='" + valor + "'";
+                // }
+                // resultado.add(pac);
+                break;
+            case 3:
+                // if (pac.getApellidos().equals(valor)) {
+                sql = "select * from pacientes where pacApellidos='" + valor + "'";
+                // }
+                // resultado.add(pac);
+                break;
+            case 4:
+                // if (pac.getSexo().equals(valor)) {
+                sql = "select * from pacientes where pacSexo='" + valor + "'";
+                // }
+                //resultado.add(pac);
+                break;
+
         }
-        return null;
 
+        try {
+            Statement st = con.createStatement();
+            ResultSet rsi = st.executeQuery(sql);
+            while (rsi.next()) {
+                String identificador = rsi.getString("pacIdentificador");
+                String nombre = rsi.getString("pacNombres");
+                String apellido = rsi.getString("pacApellidos");
+                String fechaNacimiento = rsi.getString("pacFechaNacimiento");
+                String genero = rsi.getString("pacSexo");
+                Paciente paciente = new Paciente(identificador, nombre, apellido,fechaNacimiento, genero);
+
+                resultado.add(new Paciente(identificador, nombre, apellido,fechaNacimiento, genero));
+
+            }
+            // st.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+           // JOptionPane.showMessageDialog(null, e.getMessage());
+            
+        }
+        return resultado;
     }
-
 }

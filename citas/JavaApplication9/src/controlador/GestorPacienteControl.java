@@ -16,8 +16,8 @@ public class GestorPacienteControl implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        DefaultTableModel modelo;
-        String valor = consultarpacientevista.btn_aceptar.getText();
+        DefaultTableModel tmodelo;
+        String valor = consultarpacientevista.txt_valor.getText();
         int parametro = 0;
         if (consultarpacientevista.rdb_identificacion.isSelected()) {
             parametro = 1;
@@ -31,14 +31,14 @@ public class GestorPacienteControl implements ActionListener {
         if (consultarpacientevista.rbd_genero.isSelected()) {
             parametro = 4;
         }
-        LinkedList<modelo.Paciente> paciente;
-        paciente = pacientesModelo.getPacientebyParametro(parametro, valor);
+        LinkedList<modelo.Paciente> 
+        paciente =  pacientesModelo.getPacientebyParametro(parametro, valor);
         String registro[] = new String[5];
 
         String[] Titulos = {"Identificacion", "Nombre", "Apellidos", "Fecha_Nacimiento", "Genero "};
-        modelo = new DefaultTableModel();
+        tmodelo = new DefaultTableModel();
 
-        modelo.setColumnIdentifiers(Titulos);
+        tmodelo.setColumnIdentifiers(Titulos);
         for (modelo.Paciente p : paciente) {
 
             registro[0] = p.getIdentificador();
@@ -46,9 +46,10 @@ public class GestorPacienteControl implements ActionListener {
             registro[2] = p.getApellidos();
             registro[3] = p.getFechaNacimiento();
             registro[4] = p.getSexo();
-            modelo.addRow(registro);
+            tmodelo.addRow(registro);
         }
 
-        consultarpacientevista.tbl_datos.setModel(modelo);
+        consultarpacientevista.tbl_datos.setModel(tmodelo);
+        
     }
 }

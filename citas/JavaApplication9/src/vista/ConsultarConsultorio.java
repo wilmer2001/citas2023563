@@ -127,12 +127,12 @@ public class ConsultarConsultorio extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BAceptar;
+    public javax.swing.JButton BAceptar;
     private javax.swing.JLabel LblBuscar;
-    private javax.swing.JRadioButton RNombre;
-    private javax.swing.JRadioButton RNumero;
-    private javax.swing.JTable TDatos;
-    private javax.swing.JTextField TxtBuscador;
+    public javax.swing.JRadioButton RNombre;
+    public javax.swing.JRadioButton RNumero;
+    public javax.swing.JTable TDatos;
+    public javax.swing.JTextField TxtBuscador;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JScrollPane jScrollPane1;

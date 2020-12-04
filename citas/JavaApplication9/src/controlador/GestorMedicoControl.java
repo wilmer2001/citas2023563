@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
 import javax.swing.table.DefaultTableModel;
-
 public class GestorMedicoControl implements ActionListener {
 
     modelo.GestorMedico medicoModelo;
@@ -14,6 +13,7 @@ public class GestorMedicoControl implements ActionListener {
         this.consultarmedicovista = consultarmedicovista;
         medicoModelo = new modelo.GestorMedico();
     }
+
 
     public void actionPerformed(ActionEvent e) {
         DefaultTableModel modelo;
@@ -31,7 +31,7 @@ public class GestorMedicoControl implements ActionListener {
         if (consultarmedicovista.rsexo.isSelected()) {
             parametro = 4;
         }
-        LinkedList<modelo.Medico> medico;
+        LinkedList<modelo.Medico> 
         medico = medicoModelo.getMedicobyParametro(parametro, valor);
         String registro[] = new String[5];
 
