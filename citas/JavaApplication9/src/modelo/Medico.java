@@ -1,7 +1,7 @@
 package modelo;
 
 public class Medico {
-      private String medidentificador;
+     private String medidentificador;
     private String mednombres;
     private String medapellido;
     private String medfecha;

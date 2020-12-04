@@ -9,7 +9,7 @@ public class registrarpacientes extends javax.swing.JInternalFrame {
     private controlador.PacienteControl pacienteControlador;
     public registrarpacientes() {
         initComponents();
-        pacienteControlador=new controlador.PacienteControl(this);
+       // pacienteControlador=new controlador.PacienteControl(this);
         jButton1.addActionListener(pacienteControlador);
         jButton2.addActionListener(pacienteControlador);
     }

@@ -1,15 +1,18 @@
 
 package vista;
 
-
 public class consultarpacientes extends javax.swing.JInternalFrame {
 
+    private static final long serialVersionUID = 1L;
+
     
+    private controlador.GestorPacienteControl pacienteControlador;
     public consultarpacientes() {
         initComponents();
+        pacienteControlador =new controlador.GestorPacienteControl(this);
+        btn_aceptar.addActionListener(pacienteControlador);
+        //.addActionListener(pacienteControlador);*/
     }
-
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -23,6 +26,11 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
         btn_aceptar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_datos = new javax.swing.JTable();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
 
         rdb_identificacion.setText("Identificacion");
         rdb_identificacion.addActionListener(new java.awt.event.ActionListener() {
@@ -50,6 +58,11 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
         jLabel1.setText("Valor a buscar:");
 
         btn_aceptar.setText("Aceptar");
+        btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aceptarActionPerformed(evt);
+            }
+        });
 
         tbl_datos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -70,26 +83,24 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(rdb_identificacion)
-                                .addGap(18, 18, 18)
-                                .addComponent(rbd_nombre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rbd_apellido)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(rbd_genero)
-                                .addGap(0, 18, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_valor)))
+                        .addComponent(rdb_identificacion)
                         .addGap(18, 18, 18)
-                        .addComponent(btn_aceptar))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addComponent(rbd_nombre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rbd_apellido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rbd_genero)
+                        .addGap(0, 18, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_valor)))
+                .addGap(18, 18, 18)
+                .addComponent(btn_aceptar)
                 .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,7 +118,7 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
                     .addComponent(btn_aceptar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,6 +136,10 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rdb_identificacionActionPerformed
 
+    private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
+        this.setVisible(true);
+    }//GEN-LAST:event_btn_aceptarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_aceptar;
@@ -137,4 +152,6 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
     public javax.swing.JTable tbl_datos;
     public javax.swing.JTextField txt_valor;
     // End of variables declaration//GEN-END:variables
+
+    
 }
