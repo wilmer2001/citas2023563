@@ -21,7 +21,7 @@ public class MedicoControl implements ActionListener {
             String identificacion = Medicovista.txtidentificacion.getText();
             String nombres = Medicovista.txtnombre.getText();
             String apellidos = Medicovista.txtapellido.getText();
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
             String fecha_nacimiento = formato.format(Medicovista.dcumple.getDate());
             String genero = null;
             if (Medicovista.rhombre.isSelected()) {

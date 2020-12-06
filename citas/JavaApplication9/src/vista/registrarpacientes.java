@@ -9,7 +9,7 @@ public class registrarpacientes extends javax.swing.JInternalFrame {
     private controlador.PacienteControl pacienteControlador;
     public registrarpacientes() {
         initComponents();
-       // pacienteControlador=new controlador.PacienteControl(this);
+        pacienteControlador=new controlador.PacienteControl(this);
         jButton1.addActionListener(pacienteControlador);
         jButton2.addActionListener(pacienteControlador);
     }
@@ -155,7 +155,7 @@ public class registrarpacientes extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       this.setVisible(true);
+       this.setVisible(true); 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

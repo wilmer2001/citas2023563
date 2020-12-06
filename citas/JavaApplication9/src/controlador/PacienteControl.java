@@ -23,11 +23,11 @@ public class PacienteControl implements ActionListener {
             String identificacion = pacientevista.txtidentificacion.getText();
             String nombres = pacientevista.txtnombre.getText();
             String apellidos = pacientevista.txtapellido.getText();
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
             String fecha_nacimiento = formato.format(pacientevista.jDateChooser1.getDate());
             String sexo = null;
             if (pacientevista.jRadioButton1.isSelected()) {
-                sexo = "m";
+                sexo = "M";
             } else if (pacientevista.jRadioButton2.isSelected()) {
                 sexo = "F";
             }
