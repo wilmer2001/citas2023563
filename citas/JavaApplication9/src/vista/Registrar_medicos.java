@@ -1,10 +1,18 @@
-
 package vista;
+
+
 
 public class Registrar_medicos extends javax.swing.JInternalFrame {
 
+    private static final long serialVersionUID = 1L;
+
+    private controlador.MedicoControl medicoControl;
+
     public Registrar_medicos() {
         initComponents();
+        medicoControl = new controlador.MedicoControl(this);
+        bnuevo.addActionListener(medicoControl);
+        bregistrar.addActionListener(medicoControl);
     }
 
     @SuppressWarnings("unchecked")
@@ -41,13 +49,29 @@ public class Registrar_medicos extends javax.swing.JInternalFrame {
 
         jLabel5.setText("GENERO");
 
+        txtidentificacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtidentificacionActionPerformed(evt);
+            }
+        });
+
         rhombre.setText("Hombre ");
 
         rmujer.setText("Mujer");
 
         bregistrar.setText("Registrar");
+        bregistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bregistrarActionPerformed(evt);
+            }
+        });
 
         bnuevo.setText("Nuevo");
+        bnuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bnuevoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -115,22 +139,32 @@ public class Registrar_medicos extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    private void txtidentificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidentificacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtidentificacionActionPerformed
+
+    private void bregistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bregistrarActionPerformed
+   
+    }//GEN-LAST:event_bregistrarActionPerformed
+
+    private void bnuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnuevoActionPerformed
+             this.setVisible(false);
+    }//GEN-LAST:event_bnuevoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bnuevo;
-    private javax.swing.JButton bregistrar;
-    private com.toedter.calendar.JDateChooser dcumple;
+    public javax.swing.JButton bnuevo;
+    public javax.swing.JButton bregistrar;
+    public com.toedter.calendar.JDateChooser dcumple;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JRadioButton rhombre;
-    private javax.swing.JRadioButton rmujer;
-    private javax.swing.JTextField txtapellido;
-    private javax.swing.JTextField txtidentificacion;
-    private javax.swing.JTextField txtnombre;
+    public javax.swing.JRadioButton rhombre;
+    public javax.swing.JRadioButton rmujer;
+    public javax.swing.JTextField txtapellido;
+    public javax.swing.JTextField txtidentificacion;
+    public javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
 }

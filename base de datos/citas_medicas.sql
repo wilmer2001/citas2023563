@@ -56,9 +56,11 @@ CREATE TABLE `consultorios` (
 --
 
 CREATE TABLE `medicos` (
-  `medIdentificador` char(10) NOT NULL,
-  `medNombres` varchar(50) DEFAULT NULL,
-  `medApellidos` varchar(50) DEFAULT NULL
+  `MedIdentificador` char(10) NOT NULL,
+  `MedNombres` varchar(50) DEFAULT NULL,
+  `MedApellidos` varchar(50) DEFAULT NULL,
+  `Medfecha` date Default Null,
+  `MedGenero` enum('M','F') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

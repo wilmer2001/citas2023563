@@ -1,6 +1,6 @@
 package modelo;
 
-class Paciente {
+public class Paciente {
 
     private String identificador;
     private String nombres;
@@ -55,5 +55,4 @@ class Paciente {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-
 }
