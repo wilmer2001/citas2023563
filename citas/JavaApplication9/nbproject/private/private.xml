@@ -5,7 +5,11 @@
         <group>
             <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/controlador/GestorMedicoControl.java</file>
             <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/vista/consultarpacientes.java</file>
+            <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/controlador/MedicoControl.java</file>
+            <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/modelo/Paciente.java</file>
             <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/modelo/GestorPacientes.java</file>
+            <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/modelo/GestorMedico.java</file>
+            <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/vista/principalJframe.java</file>
             <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/vista/registrarpacientes.java</file>
             <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/controlador/PacienteControl.java</file>
             <file>file:/home/wilmer/proyecto%20wilmer/citas2023563/citas/JavaApplication9/src/controlador/GestorPacienteControl.java</file>
