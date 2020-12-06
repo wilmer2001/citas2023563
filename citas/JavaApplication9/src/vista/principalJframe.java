@@ -9,6 +9,8 @@ public class principalJframe extends javax.swing.JFrame {
     consultarpacientes consultarpacientes;
     Registrar_medicos registrarmedicos;
     Consultar_medicos consultarmedicos;
+     RegistrarConsultorio registrarConsultorio;
+    ConsultarConsultorio consultarConsultorio;
 
     
     public principalJframe() {
@@ -18,6 +20,8 @@ public class principalJframe extends javax.swing.JFrame {
         add(consultarpacientes);
         registrarmedicos = new Registrar_medicos();
         consultarmedicos = new Consultar_medicos();
+        registrarConsultorio = new RegistrarConsultorio();
+        consultarConsultorio = new ConsultarConsultorio();
         initComponents();
         this.setExtendedState(principalJframe.MAXIMIZED_BOTH);
     }
@@ -217,13 +221,15 @@ public class principalJframe extends javax.swing.JFrame {
     private void MiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiRegistrarActionPerformed
         RegistrarConsultorio ventana1 = new RegistrarConsultorio();
         this.escritorio.add(ventana1);
-        ventana1.show();// TODO add your handling code here:
+        ventana1.show();
+        registrarConsultorio.setVisible(true);
     }//GEN-LAST:event_MiRegistrarActionPerformed
 
     private void MiConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiConsultarActionPerformed
         ConsultarConsultorio ventana1 = new ConsultarConsultorio();
         this.escritorio.add(ventana1);
         ventana1.show();
+        consultarConsultorio.setVisible(true);
     }//GEN-LAST:event_MiConsultarActionPerformed
 
     private void consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarActionPerformed

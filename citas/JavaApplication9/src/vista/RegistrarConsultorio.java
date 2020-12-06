@@ -1,17 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package vista;
 
 
-
-
-
 public class RegistrarConsultorio extends javax.swing.JInternalFrame {
+    
+      private static final long serialVersionUID = 1L;
 
-   
+    private controlador.ConsultorioControl consultorioControl;
+
     public RegistrarConsultorio() {
         initComponents();
+        consultorioControl = new controlador.ConsultorioControl(this);
+        BNuevo.addActionListener(consultorioControl);
+        BAceptar.addActionListener(consultorioControl);
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -33,38 +40,45 @@ public class RegistrarConsultorio extends javax.swing.JInternalFrame {
 
         LblNombreConsultorio.setText("Nombre de Consultorio:");
 
-        BAceptar.setText("Aceptar");
+        BAceptar.setText("Registrar");
+        BAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BAceptarActionPerformed(evt);
+            }
+        });
 
         BNuevo.setText("Nuevo");
+        BNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BNuevoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(BAceptar)
-                .addGap(47, 47, 47)
-                .addComponent(BNuevo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(LblNumeroConsultorio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE))
+                        .addComponent(BAceptar)
+                        .addGap(40, 40, 40)
+                        .addComponent(BNuevo))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(TxtNumeroConsultorio)
-                        .addGap(65, 65, 65)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(LblNombreConsultorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(TxtNombreConsultorio))
-                .addGap(58, 58, 58))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(TxtNumeroConsultorio)
+                            .addComponent(LblNumeroConsultorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(78, 78, 78)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LblNombreConsultorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TxtNombreConsultorio))))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LblNumeroConsultorio)
                     .addComponent(LblNombreConsultorio))
@@ -72,23 +86,31 @@ public class RegistrarConsultorio extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TxtNumeroConsultorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TxtNombreConsultorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BAceptar)
                     .addComponent(BNuevo))
-                .addGap(44, 44, 44))
+                .addGap(48, 48, 48))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void BAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BAceptarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BAceptarActionPerformed
+
+    private void BNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BNuevoActionPerformed
+         this.setVisible(true);
+    }//GEN-LAST:event_BNuevoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BAceptar;
-    private javax.swing.JButton BNuevo;
-    private javax.swing.JLabel LblNombreConsultorio;
-    private javax.swing.JLabel LblNumeroConsultorio;
-    private javax.swing.JTextField TxtNombreConsultorio;
-    private javax.swing.JTextField TxtNumeroConsultorio;
+    public javax.swing.JButton BAceptar;
+    public javax.swing.JButton BNuevo;
+    public javax.swing.JLabel LblNombreConsultorio;
+    public javax.swing.JLabel LblNumeroConsultorio;
+    public javax.swing.JTextField TxtNombreConsultorio;
+    public javax.swing.JTextField TxtNumeroConsultorio;
     // End of variables declaration//GEN-END:variables
 }
