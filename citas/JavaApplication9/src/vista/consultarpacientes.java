@@ -57,6 +57,12 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Valor a buscar:");
 
+        txt_valor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_valorActionPerformed(evt);
+            }
+        });
+
         btn_aceptar.setText("Aceptar");
         btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +145,10 @@ public class consultarpacientes extends javax.swing.JInternalFrame {
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
         this.setVisible(true);
     }//GEN-LAST:event_btn_aceptarActionPerformed
+
+    private void txt_valorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_valorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_valorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
